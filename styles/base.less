@@ -1,18 +1,14 @@
 @import "syntax-variables";
 
-atom-text-editor::shadow {
-  .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
-    // width: 10px;
-    right: 0;
-    width: auto;
-  }
-}
-atom-text-editor, :host {
+atom-text-editor, atom-text-editor::shadow, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
-  
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+    right: 0;
+    width: auto;
+  }
 
   .indent-guide {
     color: @syntax-indent-guide-color;
