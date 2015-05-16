@@ -32,6 +32,17 @@ atom-text-editor, atom-text-editor::shadow, :host {
         color: @syntax-gutter-text-color-selected;
       }
     }
+
+    &:not(.git-diff-icon) .line-number {
+      @line-number-padding: 1em;
+      padding-left: @line-number-padding;
+      
+      &.git-line-added, &.git-line-modified {
+        @git-margin-indicator-width: 0.5em;
+        border-left-width: @git-margin-indicator-width;
+        padding-left: calc(@line-number-padding ~" - " @git-margin-indicator-width);
+      }
+    }
   }
 
   .gutter .line-number.folded,
