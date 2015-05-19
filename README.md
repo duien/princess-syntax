@@ -1,5 +1,5 @@
-# princess-syntax theme
+# Princess Syntax Theme
 
-A short description of your theme.
+A bright syntax theme, with plenty of pink and purple. It's mostly optimized for Ruby, with occasional JavaScript, CSS, and markup. More improvements will probably be coming, but it's also possible I'll get bored and move on. Use at your own risk.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+![Ruby syntax example](screenshots/ruby_princess.png)

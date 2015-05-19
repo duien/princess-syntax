@@ -2,10 +2,12 @@
   "name": "princess-syntax",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "description": "A bright syntax theme, with plenty of pink and purple.",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "light",
+    "bright"
   ],
   "repository": "https://github.com/duien/princess-syntax",
   "license": "MIT",
