@@ -6,8 +6,6 @@ atom-text-editor, atom-text-editor::shadow, :host {
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
-    right: 0;
-    width: auto;
   }
 
   .indent-guide {
@@ -75,14 +73,6 @@ atom-text-editor .search-results .marker.current-result .region,
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
-// This is a line comment
-// Next to a line comment
-/* This is a block comment *//* next to a block comment */
-
-/* This is a multi-line
-block comment
-that keeps going
-*/
 .comment {
   color: @purple;
   font-style: italic;
@@ -93,8 +83,6 @@ that keeps going
   
   &.line, &.block {
     background: fade(@purple, 8);
-    margin: -1px;
-    padding: 1px;
   }
 }
 
@@ -149,7 +137,10 @@ that keeps going
   }
 
   &.other.symbol {
-    // color: @green;
+    color: @teal;
+    .punctuation.definition {
+      color: mix(@teal, @blue);
+    }
   }
 }
 
@@ -174,7 +165,6 @@ that keeps going
 }
 .function.method { // huh? I dunno, seems to be ruby function definitions
   color: @teal;
-  // font-weight: bold;
 }
 
 .invalid.illegal {
@@ -186,6 +176,7 @@ that keeps going
   background: fade(@green, 10);
   
   .punctuation {
+    background: none;
     &.string, &.embedded {
       color: fade(@green-dark, 50);
     }
@@ -283,16 +274,36 @@ that keeps going
 
   &.name.tag {
     // color: @red;
-    text-decoration: underline;
+    // text-decoration: underline;
+    color: @pink-hot;
+    
+    &.id {
+      color: @blue;
+    }
+    &.class{
+      color: @orange;
+    }
   }
 
   &.other.attribute-name {
     color: @orange;
+    
+    .punctuation.separator {
+      color: @teal-dark;
+    }
 
     &.id {
       color: @blue;
     }
   }
+}
+
+.attributes .entity.other.attribute-name {
+  color: @purple;
+}
+
+.tag .punctuation.definition {
+  color: @magenta;
 }
 
 .meta {
@@ -357,15 +368,20 @@ that keeps going
     color: @orange;
   }
 
-  &.raw.inline {
-    // color: @green;
+  &.raw {
+    color: @teal;
+    background: fade(@teal, 10);
   }
 }
 
 .source.gfm .markup {
   -webkit-font-smoothing: auto;
   &.heading {
-    // color: @green;
+    color: @magenta;
+
+    .marker {
+      color: fade(@magenta, 50);
+    }
   }
 }
 
